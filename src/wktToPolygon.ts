@@ -10,8 +10,8 @@ const wktToPolygon = (wkt: string) => {
     const polygon = coordsText.map((coordText) => {
         const [longitude, latitude] = coordText.split(' ');
         return {
-            longitude: parseFloat(longitude),
-            latitude: parseFloat(latitude),
+            longitude: parseFloat(longitude!),
+            latitude: parseFloat(latitude!),
         };
     });
 

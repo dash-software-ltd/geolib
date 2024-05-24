@@ -21,7 +21,7 @@ type unitObject = {
     [key: string]: number;
 };
 
-export const distanceConversion: unitObject = {
+export const distanceConversion = {
     m: 1,
     km: 0.001,
     cm: 100,
@@ -31,27 +31,27 @@ export const distanceConversion: unitObject = {
     ft: 100 / 30.48,
     in: 100 / 2.54,
     yd: 1 / 0.9144,
-};
+} satisfies unitObject;
 
-export const timeConversion: unitObject = {
+export const timeConversion = {
     m: 60,
     h: 3600,
     d: 86400,
-};
+} satisfies unitObject;
 
-export const areaConversion: unitObject = {
+export const areaConversion = {
     m2: 1,
+    sqm: 1,
+
     km2: 0.000001,
+    sqkm: 0.000001,
+
     ha: 0.0001,
     a: 0.01,
     ft2: 10.763911,
+    sqft: 10.763911,
     yd2: 1.19599,
+    sqyd: 1.19599,
     in2: 1550.0031,
-};
-
-// Aliases
-areaConversion.sqm = areaConversion.m2;
-areaConversion.sqkm = areaConversion.km2;
-areaConversion.sqft = areaConversion.ft2;
-areaConversion.sqyd = areaConversion.yd2;
-areaConversion.sqin = areaConversion.in2;
+    sqin: 1550.0031,
+} satisfies unitObject;

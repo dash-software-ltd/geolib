@@ -1,19 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es2018", "dom"],
-    "allowJs": false,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": false,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "lib": ["ES2018", "DOM"],
+    "allowJs": true,
     "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+
+    "strict": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "checkJs": true,
+
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
     "noEmit": true,
-    "strictNullChecks": true
+
+    "types": ["node"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "include": ["./*.mjs", "src"],
+  "exclude": ["node_modules"]
 }

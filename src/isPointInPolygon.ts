@@ -12,15 +12,15 @@ const isPointInPolygon = (
     const totalPolys = polygon.length;
     for (let i = -1, j = totalPolys - 1; ++i < totalPolys; j = i) {
         if (
-            ((getLongitude(polygon[i]) <= getLongitude(point) &&
-                getLongitude(point) < getLongitude(polygon[j])) ||
-                (getLongitude(polygon[j]) <= getLongitude(point) &&
-                    getLongitude(point) < getLongitude(polygon[i]))) &&
+            ((getLongitude(polygon[i]!) <= getLongitude(point) &&
+                getLongitude(point) < getLongitude(polygon[j]!)) ||
+                (getLongitude(polygon[j]!) <= getLongitude(point) &&
+                    getLongitude(point) < getLongitude(polygon[i]!))) &&
             getLatitude(point) <
-                ((getLatitude(polygon[j]) - getLatitude(polygon[i])) *
-                    (getLongitude(point) - getLongitude(polygon[i]))) /
-                    (getLongitude(polygon[j]) - getLongitude(polygon[i])) +
-                    getLatitude(polygon[i])
+                ((getLatitude(polygon[j]!) - getLatitude(polygon[i]!)) *
+                    (getLongitude(point) - getLongitude(polygon[i]!))) /
+                    (getLongitude(polygon[j]!) - getLongitude(polygon[i]!)) +
+                    getLatitude(polygon[i]!)
         ) {
             isInside = !isInside;
         }

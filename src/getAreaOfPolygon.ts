@@ -28,9 +28,9 @@ const getAreaOfPolygon = (points: GeolibInputCoordinates[]) => {
                 upperIndex = i + 2;
             }
 
-            const p1lon = getLongitude(points[lowerIndex]);
-            const p2lat = getLatitude(points[middleIndex]);
-            const p3lon = getLongitude(points[upperIndex]);
+            const p1lon = getLongitude(points[lowerIndex]!);
+            const p2lat = getLatitude(points[middleIndex]!);
+            const p3lon = getLongitude(points[upperIndex]!);
 
             area += (toRad(p3lon) - toRad(p1lon)) * Math.sin(toRad(p2lat));
         }

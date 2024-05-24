@@ -13,10 +13,10 @@ const sexagesimalToDecimal = (sexagesimal: any) => {
     const min = Number(data[2]) / 60 || 0;
     const sec = Number(data[4]) / 3600 || 0;
 
-    const decimal = parseFloat(data[1]) + min + sec;
+    const decimal = parseFloat(data[1]!) + min + sec;
 
     // Southern and western coordinates must be negative decimals
-    return ['S', 'W'].includes(data[7]) ? -decimal : decimal;
+    return ['S', 'W'].includes(data[7]!) ? -decimal : decimal;
 };
 
 export default sexagesimalToDecimal;

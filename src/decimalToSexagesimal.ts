@@ -22,7 +22,7 @@ const decimal2sexagesimalNext = (decimal: number) => {
         '° ' +
         min.toString().padStart(2, '0') +
         "' " +
-        secPreDec.padStart(2, '0') +
+        secPreDec!.padStart(2, '0') +
         '.' +
         secDec.padEnd(1, '0') +
         '"'

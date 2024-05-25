@@ -12,12 +12,4 @@ describe('getLongitude', () => {
     it('gets the longitude from a GeoJSON array', () => {
         expect(getLongitude([1, 2])).toEqual(1);
     });
-
-    it('does not convert to decimal if second parameter is set to true', () => {
-        expect(getLongitude({ lng: "71° 0'" }, true)).toEqual("71° 0'");
-    });
-
-    it('gets the longitude from a GeoJSON array without conversion', () => {
-        expect(getLongitude(["71° 0'", "71° 0'"], true)).toEqual("71° 0'");
-    });
 });

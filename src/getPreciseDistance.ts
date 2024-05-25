@@ -4,6 +4,14 @@ import toRad from './toRad';
 import { earthRadius } from './constants';
 import { GeolibInputCoordinates } from './types';
 
+const safeParseFloat = (value: string | number): number => {
+    if (typeof value === "string") {
+        return parseFloat(value);
+    } else {
+        return value;
+    }
+};
+
 /**
  * Calculates geodetic distance between two points specified by latitude/longitude using
  * Vincenty inverse formula for ellipsoids.
@@ -35,10 +43,10 @@ const getDistance = (
     let sinSigma;
 
     const U1 = Math.atan(
-        (1 - ellipsoidParams) * Math.tan(toRad(parseFloat(startLat)))
+        (1 - ellipsoidParams) * Math.tan(toRad(safeParseFloat(startLat)))
     );
     const U2 = Math.atan(
-        (1 - ellipsoidParams) * Math.tan(toRad(parseFloat(endLat)))
+        (1 - ellipsoidParams) * Math.tan(toRad(safeParseFloat(endLat)))
     );
     const sinU1 = Math.sin(U1);
     const cosU1 = Math.cos(U1);

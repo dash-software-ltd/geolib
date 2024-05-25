@@ -497,13 +497,13 @@ Converts the result from `getAreaForPolygon` into a different unit.
 
 `unit` can be one of:
 
--   m2, sqm (square meters)
--   km2, sqkm (square kilometers)
+-   m2 (square meters)
+-   km2 (square kilometers)
 -   ha (hectares)
 -   a (ares)
--   ft2, sqft (square feet)
--   yd2, sqyd (square yards)
--   in2, sqin (square inches)
+-   ft2 (square feet)
+-   yd2 (square yards)
+-   in2 (square inches)
 
 ```js
 geolib.convertArea(298678, 'km2'));

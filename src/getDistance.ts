@@ -5,8 +5,11 @@ import robustAcos from './robustAcos';
 import { earthRadius } from './constants';
 import { GeolibInputCoordinates } from './types';
 
-// Calculates the distance between two points.
-// This method is simple but also more inaccurate
+/**
+ * Calculates the distance between two points.
+ *
+ * This method is simple but also more inaccurate.
+ */
 const getDistance = (
     from: GeolibInputCoordinates,
     to: GeolibInputCoordinates,

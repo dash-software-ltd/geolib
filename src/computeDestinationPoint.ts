@@ -5,8 +5,11 @@ import toDeg from './toDeg';
 import { MAXLON, MINLON } from './constants';
 import { GeolibInputCoordinates } from './types';
 
-// Computes the destination point given an initial point, a distance and a bearing
-// See http://www.movable-type.co.uk/scripts/latlong.html for the original code
+/**
+ * Computes the destination point given an initial point, a distance and a bearing.
+ *
+ * @see http://www.movable-type.co.uk/scripts/latlong.html for the original code
+ */
 const computeDestinationPoint = (
     start: GeolibInputCoordinates,
     distance: number,

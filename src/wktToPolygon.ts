@@ -1,4 +1,6 @@
-// Converts a wkt text to polygon
+/**
+ * Converts a wkt text to polygon
+ */
 const wktToPolygon = (wkt: string): { latitude: number; longitude: number }[] => {
     if (!wkt.startsWith('POLYGON')) {
         throw new Error('Invalid wkt.');

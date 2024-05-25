@@ -4,9 +4,12 @@ import toRad from './toRad';
 import { earthRadius } from './constants';
 import { GeolibInputCoordinates } from './types';
 
-// Calculates geodetic distance between two points specified by latitude/longitude using
-// Vincenty inverse formula for ellipsoids. Taken from:
-// https://www.movable-type.co.uk/scripts/latlong-vincenty.html
+/**
+ * Calculates geodetic distance between two points specified by latitude/longitude using
+ * Vincenty inverse formula for ellipsoids.
+ *
+ * @see https://www.movable-type.co.uk/scripts/latlong-vincenty.html
+ */
 const getDistance = (
     start: GeolibInputCoordinates,
     end: GeolibInputCoordinates,

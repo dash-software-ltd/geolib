@@ -6,8 +6,10 @@ type BearingFunction = (
     dest: GeolibInputCoordinates
 ) => number;
 
-// Gets the compass direction from an origin coordinate to a
-// destination coordinate.
+/**
+ * Gets the compass direction from an origin coordinate to a
+ * destination coordinate.
+ */
 const getCompassDirection = (
     origin: GeolibInputCoordinates,
     dest: GeolibInputCoordinates,

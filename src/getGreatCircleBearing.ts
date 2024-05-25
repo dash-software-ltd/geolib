@@ -6,6 +6,8 @@ import { GeolibInputCoordinates } from './types';
 
 /**
  * Gets great circle bearing of two points. See description of getRhumbLineBearing for more information
+ *
+ * @see getRhumbLineBearing
  */
 const getGreatCircleBearing = (
     origin: GeolibInputCoordinates,

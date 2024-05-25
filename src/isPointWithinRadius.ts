@@ -1,7 +1,9 @@
 import getDistance from './getDistance';
 import { GeolibInputCoordinates } from './types';
 
-// Checks if a point is inside of given radius
+/**
+ * Checks if a point is inside of given radius
+ */
 const isPointWithinRadius = (
     point: GeolibInputCoordinates,
     center: GeolibInputCoordinates,

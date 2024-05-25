@@ -2,7 +2,9 @@ import getDistance from './getDistance';
 import robustAcos from './robustAcos';
 import { GeolibInputCoordinates } from './types';
 
-// Returns the minimum distance from a point to a line
+/**
+ * Returns the minimum distance from a point to a line
+ */
 const getDistanceFromLine = (
     point: GeolibInputCoordinates,
     lineStart: GeolibInputCoordinates,

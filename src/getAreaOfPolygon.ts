@@ -4,7 +4,9 @@ import getLongitude from './getLongitude';
 import { earthRadius } from './constants';
 import { GeolibInputCoordinates } from './types';
 
-// Calculates the surface area of a polygon.
+/**
+ * Calculates the surface area of a polygon.
+ */
 const getAreaOfPolygon = (points: GeolibInputCoordinates[]): number => {
     let area = 0;
 

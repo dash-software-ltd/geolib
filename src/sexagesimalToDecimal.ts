@@ -1,6 +1,8 @@
 import { sexagesimalPattern } from './constants';
 
-// Converts a sexagesimal coordinate to decimal format
+/**
+ * Converts a sexagesimal coordinate to decimal format
+ */
 const sexagesimalToDecimal = (sexagesimal: any): number => {
     const data = new RegExp(sexagesimalPattern).exec(
         sexagesimal.toString().trim()

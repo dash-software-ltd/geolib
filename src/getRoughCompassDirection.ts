@@ -1,5 +1,9 @@
-// Receives an exact compass direction (like WNW) and spits out a very rough
-// and overly simplified direction (N|E|S|W). Use with caution!
+/**
+ * Receives an exact compass direction (like WNW) and spits out a very rough
+ * and overly simplified direction (N|E|S|W). Use with caution!
+ *
+ * @experimental
+ */
 const getRoughCompassDirection = (exact: string): 'N' | 'E' | 'S' | 'W' | undefined => {
     if (/^(NNE|NE|NNW|N)$/.test(exact)) {
         return 'N';

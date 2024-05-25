@@ -4,7 +4,9 @@ import toRad from './toRad';
 import toDeg from './toDeg';
 import { GeolibInputCoordinates } from './types';
 
-// Calculates the center of a collection of points
+/**
+ * Calculates the center of a collection of points
+ */
 const getCenter = (points: GeolibInputCoordinates[]): { latitude: number; longitude: number } | false => {
     if (Array.isArray(points) === false || points.length === 0) {
         return false;

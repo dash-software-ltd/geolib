@@ -4,7 +4,9 @@ const imprecise = (number: number, decimals: number = 4): number => {
     return Math.round(number * factor) / factor;
 };
 
-// Converts a decimal coordinate value to sexagesimal format
+/**
+ * Converts a decimal coordinate value to sexagesimal format
+ */
 const decimal2sexagesimalNext = (decimal: number): string => {
     const [pre, post] = decimal.toString().split('.');
 

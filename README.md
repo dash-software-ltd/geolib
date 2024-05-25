@@ -2,6 +2,8 @@
 
 Library to provide basic geospatial operations like distance calculation, conversion of decimal coordinates to sexagesimal and vice versa, etc. This library is currently **2D**, meaning that altitude/elevation is not yet supported by any of its functions!
 
+The library was originally written by [Manuel Bieh](https://github.com/manuelbieh) and the original code can be found on [GitHub](https://github.com/manuelbieh/geolib).
+
 ## Usage
 
 You can either import certain functions from the package directly:

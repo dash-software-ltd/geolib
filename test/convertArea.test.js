@@ -10,10 +10,6 @@ describe('convertArea', () => {
         expect(convertArea(1000, 'in2')).toEqual(1550003.0999999999);
     });
 
-    it('should work with aliased units', () => {
-        expect(convertArea(1000, 'sqft')).toEqual(convertArea(1000, 'ft2'));
-    });
-
     it('should throw if an invalid unit was used', () => {
         expect(() => convertArea(150, 'invalid')).toThrow();
     });

@@ -3,7 +3,7 @@ import { GeolibInputCoordinates } from './types';
 const getCoordinateKey = <Keys>(
     point: GeolibInputCoordinates,
     keysToLookup: Keys[]
-) => {
+): Keys | undefined => {
     return keysToLookup.reduce((foundKey: Keys | undefined, key: any):
         | Keys
         | undefined => {

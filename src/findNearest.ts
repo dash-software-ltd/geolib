@@ -5,6 +5,6 @@ import { GeolibInputCoordinates } from './types';
 const findNearest = (
     point: GeolibInputCoordinates,
     coords: GeolibInputCoordinates[]
-) => orderByDistance(point, coords)[0];
+): GeolibInputCoordinates => orderByDistance(point, coords)[0]!;
 
 export default findNearest;

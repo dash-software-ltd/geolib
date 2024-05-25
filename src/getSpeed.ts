@@ -6,7 +6,7 @@ const getSpeed = (
     start: GeolibInputCoordinatesWithTime,
     end: GeolibInputCoordinatesWithTime,
     distanceFn: GeolibDistanceFn = getDistance
-) => {
+): number => {
     const distance = distanceFn(start, end);
     const time = Number(end.time) - Number(start.time);
     const metersPerSecond = (distance / time) * 1000;

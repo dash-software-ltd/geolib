@@ -11,7 +11,7 @@ const getDistance = (
     from: GeolibInputCoordinates,
     to: GeolibInputCoordinates,
     accuracy: number = 1
-) => {
+): number => {
     accuracy =
         typeof accuracy !== 'undefined' && !isNaN(accuracy) ? accuracy : 1;
 

@@ -2,7 +2,7 @@ import { areaConversion } from './constants';
 
 // This is a convenience function to easily convert distances in square meters to
 // any other common square measure (km2, sqft, ha, ...)
-const convertArea = (squareMeters: number, targetUnit: keyof typeof areaConversion = 'm2') => {
+const convertArea = (squareMeters: number, targetUnit: keyof typeof areaConversion = 'm2'): number => {
     const factor = areaConversion[targetUnit];
     if (factor) {
         return squareMeters * factor;

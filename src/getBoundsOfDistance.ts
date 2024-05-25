@@ -10,7 +10,7 @@ import { GeolibInputCoordinates } from './types';
 const getBoundsOfDistance = (
     point: GeolibInputCoordinates,
     distance: number
-) => {
+): [{ latitude: number; longitude: number }, { latitude: number; longitude: number }] => {
     const latitude = getLatitude(point);
     const longitude = getLongitude(point);
 

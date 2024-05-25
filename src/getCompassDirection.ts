@@ -12,7 +12,7 @@ const getCompassDirection = (
     origin: GeolibInputCoordinates,
     dest: GeolibInputCoordinates,
     bearingFn: BearingFunction = getRhumbLineBearing
-) => {
+): 'NNE' | 'NE' | 'ENE' | 'E' | 'ESE' | 'SE' | 'SSE' | 'S' | 'SSW' | 'SW' | 'WSW' | 'W' | 'WNW' | 'NW' | 'NNW' | 'N' => {
     const bearing =
         typeof bearingFn === 'function'
             ? bearingFn(origin, dest)

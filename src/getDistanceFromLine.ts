@@ -8,7 +8,7 @@ const getDistanceFromLine = (
     lineStart: GeolibInputCoordinates,
     lineEnd: GeolibInputCoordinates,
     accuracy: number = 1
-) => {
+): number => {
     const d1 = getDistance(lineStart, point, accuracy);
     const d2 = getDistance(point, lineEnd, accuracy);
     const d3 = getDistance(lineStart, lineEnd, accuracy);

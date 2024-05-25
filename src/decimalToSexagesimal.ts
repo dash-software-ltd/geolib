@@ -1,11 +1,11 @@
 // trying to sanitize floating point fuckups here to a certain extent
-const imprecise = (number: number, decimals: number = 4) => {
+const imprecise = (number: number, decimals: number = 4): number => {
     const factor = Math.pow(10, decimals);
     return Math.round(number * factor) / factor;
 };
 
 // Converts a decimal coordinate value to sexagesimal format
-const decimal2sexagesimalNext = (decimal: number) => {
+const decimal2sexagesimalNext = (decimal: number): string => {
     const [pre, post] = decimal.toString().split('.');
 
     const deg = Math.abs(Number(pre));

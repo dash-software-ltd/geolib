@@ -7,7 +7,7 @@ import { GeolibInputCoordinates } from './types';
 const isPointInPolygon = (
     point: GeolibInputCoordinates,
     polygon: GeolibInputCoordinates[]
-) => {
+): boolean => {
     let isInside = false;
     const totalPolys = polygon.length;
     for (let i = -1, j = totalPolys - 1; ++i < totalPolys; j = i) {

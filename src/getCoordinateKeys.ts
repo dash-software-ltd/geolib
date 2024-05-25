@@ -17,7 +17,7 @@ const getCoordinateKeys = (
         latitude: latitudeKeys,
         altitude: altitudeKeys,
     }
-) => {
+): { latitude?: string | number; longitude?: string | number; accuracy?: string | number } => {
     const longitude: LongitudeKeys | undefined = getCoordinateKey(
         point,
         keysToLookup.longitude

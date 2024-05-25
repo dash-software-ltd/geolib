@@ -6,7 +6,7 @@ const isPointInLine = (
     point: GeolibInputCoordinates,
     lineStart: GeolibInputCoordinates,
     lineEnd: GeolibInputCoordinates
-) => {
+): boolean => {
     return (
         getDistance(lineStart, point) + getDistance(point, lineEnd) ===
         getDistance(lineStart, lineEnd)

@@ -10,7 +10,7 @@ import { GeolibInputCoordinates } from './types';
  * US state Oklahoma: `getCenter` on that gives a southern point, because the
  * southern border contains a lot more nodes, than the others.
  */
-const getCenterOfBounds = (coords: GeolibInputCoordinates[]) => {
+const getCenterOfBounds = (coords: GeolibInputCoordinates[]): { latitude: number; longitude: number } => {
     const bounds = getBounds(coords);
     const latitude = bounds.minLat + (bounds.maxLat - bounds.minLat) / 2;
     const longitude = bounds.minLng + (bounds.maxLng - bounds.minLng) / 2;

@@ -8,6 +8,6 @@ const isPointNearLine = (
     start: GeolibInputCoordinates,
     end: GeolibInputCoordinates,
     distance: number
-) => getDistanceFromLine(point, start, end) < distance;
+): boolean => getDistanceFromLine(point, start, end) < distance;
 
 export default isPointNearLine;

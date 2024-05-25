@@ -10,7 +10,7 @@ import { GeolibInputCoordinates } from './types';
 const getGreatCircleBearing = (
     origin: GeolibInputCoordinates,
     dest: GeolibInputCoordinates
-) => {
+): number => {
     const destLat = getLatitude(dest);
     const detLon = getLongitude(dest);
     const originLat = getLatitude(origin);

@@ -16,7 +16,7 @@ import { GeolibInputCoordinates } from './types';
 const getRhumbLineBearing = (
     origin: GeolibInputCoordinates,
     dest: GeolibInputCoordinates
-) => {
+): number => {
     // difference of longitude coords
     let diffLon = toRad(getLongitude(dest)) - toRad(getLongitude(origin));
 

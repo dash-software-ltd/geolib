@@ -11,7 +11,7 @@ const orderByDistance = (
     point: GeolibInputCoordinates,
     coords: GeolibInputCoordinates[],
     distanceFn: DistanceFn = getDistance
-) => {
+): GeolibInputCoordinates[] => {
     distanceFn = typeof distanceFn === 'function' ? distanceFn : getDistance;
 
     return coords

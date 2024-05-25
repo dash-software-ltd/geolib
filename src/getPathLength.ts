@@ -15,7 +15,7 @@ type Accumulated = {
 const getPathLength = (
     points: GeolibInputCoordinates[],
     distanceFn: DistanceFn = getDistance
-) => {
+): number => {
     return points.reduce(
         (acc: Accumulated, point: GeolibInputCoordinates) => {
             if (typeof acc === 'object' && acc.last !== null) {

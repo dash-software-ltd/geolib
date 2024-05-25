@@ -12,7 +12,7 @@ const computeDestinationPoint = (
     distance: number,
     bearing: number,
     radius: number = 6371000
-) => {
+): { latitude: number, longitude: number } => {
     const lat = getLatitude(start);
     const lng = getLongitude(start);
 
